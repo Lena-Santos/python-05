@@ -6,7 +6,43 @@ def main():
     main_loop()
 
 def main_loop():
-  pass
+   print("Du betritts die Schule und hast noch 12 Minuten bis du bei deinem Klassenraum sein musst")
+   print("Du siehst einen Schüler (Jg.10).")
+
+   Entscheidung()
+
+
+
+
+   #print("Du siehst einen Schüler (Jg.5).")
+   #Entscheidung()
+
+   #print("Du siehst einen Schüler (Jg.13).")
+   #Entscheidung()
+
+
+def Entscheidung():
+    befehle = input("(S)prichst du ihn an, versuchst du, ihn zu (i)gnorieren oder siehst du dich (u)m?")
+    if befehle == "s":
+        print("Der Schüler ist sehr agressiv und beleidigt dich.")
+        print("Du würfelst 22")
+        print("Der Schüler (Jg.5) würfelt 7")
+        print("Deine Antwort war sehr effektiv! Der Schüler (Jg.5) verschwindet.")
+    elif befehle == "u":
+        print(" Du siehst dich um und siehst:")
+        print("Eine Schülerin(Jg.5)")
+        print("Einen SChüler (Jg.7)")
+        print("Eine Schülerin (Jg.8)")
+        print("Eine Schülerin (Jg.10)")
+        print ("Einen Schüler (Jg.13)")
+    elif befehle == "i":
+        print("Du ziehst deinen Kopf ein und läufst schnell weiter.")
+        print("Der Schüler (Jg.10) bemerkt dich nicht einmal.")
+    else:
+        print("FALSCH")
+
+
+
 
 
 def print_header():
