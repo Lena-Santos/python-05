@@ -24,25 +24,34 @@ def main_loop():
 def Entscheidung():
     befehle = input("(S)prichst du ihn an, versuchst du, ihn zu (i)gnorieren oder siehst du dich (u)m?")
     if befehle == "s":
-        print("Der Schüler ist sehr agressiv und beleidigt dich.")
-        print("Du würfelst 22")
-        print("Der Schüler (Jg.5) würfelt 7")
-        print("Deine Antwort war sehr effektiv! Der Schüler (Jg.5) verschwindet.")
+       ansprechen()
     elif befehle == "u":
-        print(" Du siehst dich um und siehst:")
-        print("Eine Schülerin(Jg.5)")
-        print("Einen SChüler (Jg.7)")
-        print("Eine Schülerin (Jg.8)")
-        print("Eine Schülerin (Jg.10)")
-        print ("Einen Schüler (Jg.13)")
+        umsehen()
     elif befehle == "i":
-        print("Du ziehst deinen Kopf ein und läufst schnell weiter.")
-        print("Der Schüler (Jg.10) bemerkt dich nicht einmal.")
+       ignorieren()
     else:
         print("FALSCH")
 
 
 
+def ansprechen():
+    print("Der Schüler ist sehr agressiv und beleidigt dich.")
+    print("Du würfelst 22")
+    print("Der Schüler (Jg.5) würfelt 7")
+    print("Deine Antwort war sehr effektiv! Der Schüler (Jg.5) verschwindet.")
+
+
+def umsehen():
+    print(" Du siehst dich um und siehst:")
+    print("Eine Schülerin(Jg.5)")
+    print("Einen SChüler (Jg.7)")
+    print("Eine Schülerin (Jg.8)")
+    print("Eine Schülerin (Jg.10)")
+    print("Einen Schüler (Jg.13)")
+
+def ignorieren():
+    print("Du ziehst deinen Kopf ein und läufst schnell weiter.")
+    print("Der Schüler (Jg.10) bemerkt dich nicht einmal.")
 
 
 def print_header():
