@@ -5,6 +5,15 @@ def main():
     print_header()
     main_loop()
 
+
+
+
+
+
+
+
+
+
 def print_header():
     print('-------------------------------------')
     print('           EGGE QUEST')
@@ -12,6 +21,15 @@ def print_header():
     print()
 
 def main_loop():
+    enemies = []
+
+    for x in range(5):
+        level = random.randint(5, 13)
+        enemies.append(f'Schülerin Jg. {level}')
+
+    print(enemies)
+
+
     print("Du betritts die Schule und hast noch 12 Minuten bis du bei deinem Klassenraum sein musst")
     print("Du siehst einen Schüler (Jg.10).")
 
@@ -20,7 +38,7 @@ def main_loop():
         if befehle == "s":
             ansprechen()
         elif befehle == "u":
-            umsehen()
+            umsehen(enemies)
         elif befehle == "i":
             ignorieren()
         elif befehle == "x":
@@ -42,13 +60,11 @@ def ignorieren():
     print("Du ziehst deinen Kopf ein und läufst schnell weiter.")
     print("Der Schüler (Jg.10) bemerkt dich nicht einmal.")
 
-def umsehen():
+def umsehen(enemies):
     print(" Du siehst dich um und siehst:")
-    print("Eine Schülerin(Jg.5)")
-    print("Einen SChüler (Jg.7)")
-    print("Eine Schülerin (Jg.8)")
-    print("Eine Schülerin (Jg.10)")
-    print("Einen Schüler (Jg.13)")
+    for enemy in enemies:
+        print(enemy)
+
 
 
 
