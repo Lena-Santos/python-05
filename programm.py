@@ -5,32 +5,30 @@ def main():
     print_header()
     main_loop()
 
+def print_header():
+    print('-------------------------------------')
+    print('           EGGE QUEST')
+    print('-------------------------------------')
+    print()
+
 def main_loop():
-   print("Du betritts die Schule und hast noch 12 Minuten bis du bei deinem Klassenraum sein musst")
-   print("Du siehst einen Schüler (Jg.10).")
+    print("Du betritts die Schule und hast noch 12 Minuten bis du bei deinem Klassenraum sein musst")
+    print("Du siehst einen Schüler (Jg.10).")
 
-   Entscheidung()
+    while True:
+        befehle = input("(S)prichst du ihn an, versuchst du, ihn zu (i)gnorieren oder siehst du dich (u)m? ")
+        if befehle == "s":
+            ansprechen()
+        elif befehle == "u":
+            umsehen()
+        elif befehle == "i":
+            ignorieren()
+        elif befehle == "x":
+            break
 
+        else:
+            print("FALSCH")
 
-
-
-   #print("Du siehst einen Schüler (Jg.5).")
-   #Entscheidung()
-
-   #print("Du siehst einen Schüler (Jg.13).")
-   #Entscheidung()
-
-
-def Entscheidung():
-    befehle = input("(S)prichst du ihn an, versuchst du, ihn zu (i)gnorieren oder siehst du dich (u)m?")
-    if befehle == "s":
-       ansprechen()
-    elif befehle == "u":
-        umsehen()
-    elif befehle == "i":
-       ignorieren()
-    else:
-        print("FALSCH")
 
 
 
@@ -40,6 +38,9 @@ def ansprechen():
     print("Der Schüler (Jg.5) würfelt 7")
     print("Deine Antwort war sehr effektiv! Der Schüler (Jg.5) verschwindet.")
 
+def ignorieren():
+    print("Du ziehst deinen Kopf ein und läufst schnell weiter.")
+    print("Der Schüler (Jg.10) bemerkt dich nicht einmal.")
 
 def umsehen():
     print(" Du siehst dich um und siehst:")
@@ -49,17 +50,16 @@ def umsehen():
     print("Eine Schülerin (Jg.10)")
     print("Einen Schüler (Jg.13)")
 
-def ignorieren():
-    print("Du ziehst deinen Kopf ein und läufst schnell weiter.")
-    print("Der Schüler (Jg.10) bemerkt dich nicht einmal.")
-
-
-def print_header():
-    print('-------------------------------------')
-    print('           EGGE QUEST')
-    print('-------------------------------------')
-    print()
 
 
 if __name__ == '__main__':
     main()
+
+
+
+
+
+
+
+
+
